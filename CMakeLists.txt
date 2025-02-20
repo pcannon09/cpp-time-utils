@@ -40,13 +40,14 @@ set(headers
     ${incDir}/Time.hpp
     ${incDir}/macros.hpp
 
-    ${testDir}/inc/stopwatch.hpp
+    ${testDir}/inc/tests.hpp
 )
 
 # Sources from the `src/` dir
 set(sources
     ${testDir}/src/main.cpp
     ${testDir}/src/stopwatch.cpp
+    ${testDir}/src/timer.cpp
 
     ${srcDir}/Stopwatch.cpp
     ${srcDir}/Timer.cpp
