@@ -15,6 +15,8 @@ namespace tests
         stt::DateInfo dateInfo;
         stt::TimeInfo timeInfo;
 
+        time.setUTCOffset(5, 30);
+
         while (1)
         {
             time.update(tzInfo);
