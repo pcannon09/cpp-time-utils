@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
     else if (answer == "time")
     {
-        
+        return tests::time();
     }
 
     else 
