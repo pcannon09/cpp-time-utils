@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "../../test/inc/stopwatch.hpp"
+#include "../../test/inc/tests.hpp"
 
 int main()
 {
