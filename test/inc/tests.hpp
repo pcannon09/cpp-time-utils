@@ -1,6 +1,6 @@
 #pragma once
 
-#include "stopwatch.hpp"
+#include "tests.hpp"
 
 namespace tests
 {
