@@ -31,17 +31,19 @@ namespace tests
 
         std::this_thread::sleep_for(std::chrono::seconds(2));
 
-        std::cout << "STOP\n";
+        std::cout << "\nSTOP\n";
 
         watch.stop();
 
         std::this_thread::sleep_for(std::chrono::seconds(2));
 
-        std::cout << "START\n";
+        std::cout << "\nSTART\n";
 
         watch.start();
 
         std::this_thread::sleep_for(std::chrono::seconds(1));
+
+        watch.deleteWatch();
 
         return 0;
     }
