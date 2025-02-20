@@ -6,5 +6,6 @@ namespace tests
 {
     int stopwatch();
     int timer();
+    int time();
 }
 
