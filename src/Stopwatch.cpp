@@ -3,8 +3,6 @@
 #include <thread>
 #include <atomic>
 
-#include <iostream>
-
 #include "../inc/Stopwatch.hpp"
 #include "../inc/types.hpp"
 
@@ -28,10 +26,10 @@ namespace stt
         auto now = std::chrono::high_resolution_clock::now();
         auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - this->startTime).count();
 
-        progress.hour = elapsed / 3600000 + addProgress.hour;
-        progress.min = (elapsed % 3600000) / 60000 +  addProgress.min;
-        progress.sec = (elapsed % 60000) / 1000 +  addProgress.sec;
-        progress.ms = elapsed % 1000 +  addProgress.ms;
+        this->progress.hour = elapsed / 3600000 + addProgress.hour;
+        this->progress.min = (elapsed % 3600000) / 60000 +  addProgress.min;
+        this->progress.sec = (elapsed % 60000) / 1000 +  addProgress.sec;
+        this->progress.ms = elapsed % 1000 +  addProgress.ms;
 
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }
@@ -39,9 +37,7 @@ namespace stt
     // PUBLIC
     Stopwatch::Stopwatch(std::string id)
         : elapsedTime(0)
-    {
-        this->id = id;
-    }
+    { this->id = id; }
 
     Stopwatch::~Stopwatch() { this->deleteWatch(); }
 
@@ -55,7 +51,8 @@ namespace stt
 
     void Stopwatch::start()
     {
-        if (this->isRunning.load() != TRUE) {
+        if (this->isRunning.load() != TRUE)
+        {
             while (threadActive.load())
             { std::this_thread::sleep_for(std::chrono::milliseconds(10)); }
 
