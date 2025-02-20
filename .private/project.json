@@ -1,6 +1,6 @@
 {
-    "name": "Cpp STT Utils",
-    "CMakeName": "CppSTTUtils",
+    "name": "CPP Time Utils",
+    "CMakeName": "CPPTimeUtils",
 
     "version": "0.0.1",
     "versionState": "dev"
