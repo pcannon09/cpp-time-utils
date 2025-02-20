@@ -33,8 +33,13 @@ namespace stt
     private:
         static std::string id;
 
+        static int utcHourOffset;
+        static unsigned int utcMinOffset;
+
     public:
         Time(std::string ID);
+
+        void setUTCOffset(int hour, unsigned int min);
 
         int update(TimeInfo &info);
         int update(TimeZoneInfo &info);

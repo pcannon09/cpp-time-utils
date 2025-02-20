@@ -3,12 +3,16 @@
 #include <chrono>
 #include <iomanip>
 #include <sstream>
+#include <iostream>
 
 #include "../inc/Time.hpp"
 
 namespace stt
 {
     std::string Time::id;
+
+    int Time::utcHourOffset;
+    unsigned int Time::utcMinOffset;
 
     Time::Time(std::string ID)
     { this->id = ID; }
@@ -76,19 +80,40 @@ namespace stt
             auto duration = now.time_since_epoch();
             auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(duration) % 1000;
 
-            info.hour = (info.is12hFormat) ? 
-                    (local->tm_hour >= 12) ? local->tm_hour - 12 : local->tm_hour
-                : local->tm_hour;
+            int adjHour = local->tm_hour + this->utcHourOffset;
+            int adjMin = local->tm_min + this->utcMinOffset;
 
-            info.min = local->tm_min;
+            if (adjMin >= 60)
+            {
+                adjHour += adjMin / 60;
+                adjMin %= 60;
+            }
+
+            if (adjHour >= 24)
+            { adjHour %= 24; }
+
+            else if (adjHour < 0)
+            { adjHour += 24; }
+
+            info.hour = (info.is12hFormat) ? 
+                        ((adjHour == 0 || adjHour == 12) ? 12 : adjHour % 12)
+                      : adjHour;
+                      
+            info.min = adjMin;
             info.sec = local->tm_sec;
-            info.isAm = (local->tm_hour < 12) ? true : false;
             info.ms = ms.count();
+            info.isAm = (adjHour < 12);
 
             return 0;
         }
 
         return -1;
+    }
+
+    void Time::setUTCOffset(int hour, unsigned int min)
+    {
+        this->utcHourOffset = hour;
+        this->utcMinOffset = min;
     }
 
     bool Time::set12hFormat(bool set12hFormat)
