@@ -48,6 +48,7 @@ set(sources
     ${testDir}/src/main.cpp
     ${testDir}/src/stopwatch.cpp
     ${testDir}/src/timer.cpp
+    ${testDir}/src/time.cpp
 
     ${srcDir}/Stopwatch.cpp
     ${srcDir}/Timer.cpp
