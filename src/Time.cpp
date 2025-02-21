@@ -1,9 +1,6 @@
 #include <string>
 #include <ctime>
 #include <chrono>
-#include <iomanip>
-#include <sstream>
-#include <iostream>
 
 #include "../inc/Time.hpp"
 
@@ -54,12 +51,7 @@ namespace timeUtils
             info.isDST = local->tm_isdst;
             info.gmtOff = local->tm_gmtoff;
 
-            std::ostringstream oss;
-
-            oss << (hours >= 0 ? "+" : "") << hours
-                << ":" << std::setw(2) << std::setfill('0') << mins;
-
-            info.utcTimezone = oss.str();
+            info.utcTimezone = {std::to_string(hours), std::to_string(mins)};
 
             return 0;
         }
