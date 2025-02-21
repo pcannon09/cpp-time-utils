@@ -3,31 +3,12 @@
 #include "Time.hpp"
 
 #include <string>
+#include <vector>
+
+#include "../inc/types.hpp"
 
 namespace timeUtils
 {
-    typedef struct DateInfo
-    {
-        unsigned int year, month, day, weekDay, yearDay;
-    } DateInfo;
-
-    typedef struct TimeZoneInfo
-    {
-        bool isDST;
-        bool gmtOff;
-
-        std::string timezone;
-        std::string utcTimezone;
-    } TimeZoneInfo;
-
-    typedef struct TimeInfo
-    {
-        unsigned int hour, min, sec, ms;
-
-        bool isAm;
-        bool is12hFormat;
-    } TimeInfo;
-
     class Time
     {
     private:

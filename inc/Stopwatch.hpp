@@ -10,11 +10,6 @@
 
 namespace timeUtils
 {
-    typedef struct Timestamp
-    {
-        unsigned int hour, min, sec, ms;
-    } Timestamp;
-
     class Stopwatch
     {
     private:
