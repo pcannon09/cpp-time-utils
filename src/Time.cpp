@@ -23,6 +23,7 @@ namespace timeUtils
         if (local)
         {
             info.year = local->tm_year + 1900;
+            info.month = local->tm_mon + 1;
             info.day = local->tm_mday;
             info.weekDay = local->tm_wday;
             info.yearDay = local->tm_yday;
