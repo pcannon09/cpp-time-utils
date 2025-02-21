@@ -49,10 +49,12 @@ set(sources
     ${testDir}/src/stopwatch.cpp
     ${testDir}/src/timer.cpp
     ${testDir}/src/time.cpp
+    ${testDir}/src/sleep.cpp
 
     ${srcDir}/Stopwatch.cpp
     ${srcDir}/Timer.cpp
     ${srcDir}/Time.cpp
+    ${srcDir}/Sleep.cpp
 )
 
 # Vendor sources from the `vendor/` dir that are used in this project
