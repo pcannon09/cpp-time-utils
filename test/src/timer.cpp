@@ -10,7 +10,7 @@ namespace tests
     {
         std::cout << "Starting timer\n";
 
-        stt::Timer timer("main", {0, 0, 6, 0});
+        timeUtils::Timer timer("main", {0, 0, 6, 0});
 
         timer.setThread(true);
         timer.start();

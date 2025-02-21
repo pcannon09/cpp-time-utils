@@ -7,7 +7,7 @@
 
 #include "../inc/Time.hpp"
 
-namespace stt
+namespace timeUtils
 {
     std::string Time::id;
 

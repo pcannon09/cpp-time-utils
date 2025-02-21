@@ -8,7 +8,7 @@
 
 #include "../inc/types.hpp"
 
-namespace stt
+namespace timeUtils
 {
     typedef struct Timestamp
     {

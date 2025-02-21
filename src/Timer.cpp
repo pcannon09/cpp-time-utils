@@ -6,7 +6,7 @@
 #include "../inc/Timer.hpp"
 #include "../inc/types.hpp"
 
-namespace stt
+namespace timeUtils
 {
     // PRIVATE
     std::string Timer::id;

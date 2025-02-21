@@ -4,7 +4,7 @@
 
 #include <string>
 
-namespace stt
+namespace timeUtils
 {
     typedef struct DateInfo
     {

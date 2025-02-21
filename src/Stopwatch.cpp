@@ -6,7 +6,7 @@
 #include "../inc/Stopwatch.hpp"
 #include "../inc/types.hpp"
 
-namespace stt
+namespace timeUtils
 {
     // PRIVATE
     std::string Stopwatch::id;

@@ -11,7 +11,7 @@ namespace tests
     {
         std::cout << "Starting at 1min, 9secs\n";
 
-        stt::Stopwatch watch("main");
+        timeUtils::Stopwatch watch("main");
 
         watch.setThread(true);
         watch.set({0, 1, 9, 0});

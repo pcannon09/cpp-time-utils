@@ -2,7 +2,7 @@
 
 #include "types.hpp"
 
-namespace stt
+namespace timeUtils
 {
     enum TimerStopwatchState
     {

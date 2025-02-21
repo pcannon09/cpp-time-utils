@@ -9,11 +9,11 @@ namespace tests
 {
     int time()
     {
-        stt::Time time("main");
+        timeUtils::Time time("main");
 
-        stt::TimeZoneInfo tzInfo;
-        stt::DateInfo dateInfo;
-        stt::TimeInfo timeInfo;
+        timeUtils::TimeZoneInfo tzInfo;
+        timeUtils::DateInfo dateInfo;
+        timeUtils::TimeInfo timeInfo;
 
         time.setUTCOffset(5, 30);
 
