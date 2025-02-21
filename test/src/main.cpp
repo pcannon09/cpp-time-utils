@@ -31,7 +31,16 @@ int main(int argc, char *argv[])
 
     else if (answer == "time")
     {
+        std::cout << "Starting **Time** test\n";
+
         return tests::time();
+    }
+
+    else if (answer == "sleep")
+    {
+        std::cout << "Starting **Sleep** test\n";
+
+        return tests::sleep();
     }
 
     else 
