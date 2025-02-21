@@ -30,7 +30,9 @@ namespace tests
                 << "GMT Off? : " << tzInfo.gmtOff << "\n"
                 << "Is DST? : " << tzInfo.isDST << "\n"
                 << "Current timezone : " << tzInfo.timezone << "\n"
-                << "Current UTC timezone : " << tzInfo.utcTimezone << "\n"
+                << "Current UTC timezone : UTC " << 
+                    (std::stoi(tzInfo.utcTimezone[0]) >= 0 ? "+" : "") + tzInfo.utcTimezone[0] << ":" <<
+                    tzInfo.utcTimezone[1] << "\n"
 
                 << "- TIME INFO -\n"
                 << "Hour: " << timeInfo.hour <<  "\n"
@@ -49,7 +51,7 @@ namespace tests
 
                 << "\r" << std::flush;
 
-                std::this_thread::sleep_for(std::chrono::milliseconds(10));
+                std::this_thread::sleep_for(std::chrono::milliseconds(50));
 
                 system("clear");
         }
