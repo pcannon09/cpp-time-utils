@@ -20,12 +20,11 @@ set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} ${programFlags}")
 
 # Warn about the current CXX compiling using for compilation
 message(STATUS "CXX Compiler: ${CMAKE_CXX_COMPILER}")
-message(STATUS "{${projectName}} version: ${projectVersion}")
+message(STATUS "${projectName} version: ${projectVersion}")
 
 # Setup
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 11) # Minimum version can be C++11 but there is some support for C++98
 
 # Dir setup
 set(srcDir "${CMAKE_SOURCE_DIR}/src")
