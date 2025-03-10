@@ -3,7 +3,7 @@
 // Versioning
 #define STT_VERSION_MAJOR          1
 #define STT_VERSION_MINOR          1
-#define STT_VERSION_PATCH          0
+#define STT_VERSION_PATCH          1
 
 // Version states:
 // dev - develoment (Before Beta version)
