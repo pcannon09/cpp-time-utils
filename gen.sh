@@ -38,5 +38,7 @@ printf "${BOLD}${BRIGHT_GREEN}[ MKDIR ] Generating \`build/\` files${RESET} " ; 
 
 printf "${BOLD}${BRIGHT_GREEN}[ TOUCH ] Generating \`.private/dev/compilation.json\` files${RESET} " ; touch .private/dev/compilation.json ; echo -e "${BOLD}${BRIGHT_GREEN}[ OK ]${RESET}"
 
+doxygen Doxyfile
+
 echo -e "[ DONE ]"
 
