@@ -1,0 +1,28 @@
+\doxysection{macros.\+hpp}
+\hypertarget{macros_8hpp_source}{}\label{macros_8hpp_source}\index{inc/macros.hpp@{inc/macros.hpp}}
+\mbox{\hyperlink{macros_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Versioning}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ STT\_VERSION\_MAJOR\ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ STT\_VERSION\_MINOR\ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ STT\_VERSION\_PATCH\ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Version\ states:}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ dev\ -\/\ develoment\ (Before\ Beta\ version)}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ beta\ -\/\ Beta\ (Testing)}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ snap\ -\/\ Snapshot\ (Future\ update)}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ build\ -\/\ Built\ version}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ STT\_VERSION\_STATE\ \ \ \ \ \ \ \ \ \ "{}build"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ STT\_VERSION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((STT\_VERSION\_MAJOR<<16)|(STT\_VERSION\_MINOR<<8)|(STT\_VERSION\_PATCH)|(STT\_VERSION\_STATE\ <<\ 24))}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ STT\_VERSION\_CHECK(STT\_VERSION\_MAJOR,\ STT\_VERSION\_MINOR,\ STT\_VERSION\_PATCH,\ STT\_VERSION\_STATE)\ \(\backslash\)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \ \ \ ((STT\_VERSION\_MAJOR<<16)|(STT\_VERSION\_MINOR<<8)|(STT\_VERSION\_PATCH)|(STT\_VERSION\_STATE\ <<\ 24))}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ Macro\ utils}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ STRINGIFY(x)\ \#x}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ TOSTRING(x)\ STRINGIFY(x)}}
+
+\end{DoxyCode}

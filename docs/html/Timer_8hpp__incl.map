@@ -1,0 +1,14 @@
+<map id="inc/Timer.hpp" name="inc/Timer.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="72,7,185,32"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="167,4,197,5,208,10,212,19,209,27,202,32,181,36,180,30,200,27,205,24,207,20,204,14,196,10,166,9"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,153,65,179"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="108,34,80,54,55,81,43,110,39,139,33,139,38,109,50,79,76,50,105,30"/>
+<area shape="rect" id="Node000003" href="$types_8hpp.html" title=" " alt="" coords="65,80,193,105"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="131,32,131,67,126,67,126,32"/>
+<area shape="rect" id="Node000005" href="$macros_8hpp.html" title=" " alt="" coords="241,80,382,105"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="159,30,270,72,268,77,157,35"/>
+<area shape="poly" id="edge5_Node000003_Node000002" title=" " alt="" coords="115,108,63,147,60,143,112,103"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="170,77,203,79,215,84,219,93,216,100,208,105,184,109,183,104,206,100,212,97,214,93,211,88,202,84,170,83"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="97,153,161,179"/>
+<area shape="poly" id="edge6_Node000003_Node000004" title=" " alt="" coords="131,106,131,140,126,140,126,106"/>
+</map>
