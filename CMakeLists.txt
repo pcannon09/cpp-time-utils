@@ -30,7 +30,6 @@ set(CMAKE_CXX_STANDARD 11) # Minimum version can be C++11 but there is some supp
 set(srcDir "${CMAKE_SOURCE_DIR}/src")
 set(testDir "${CMAKE_SOURCE_DIR}/test")
 set(incDir "${CMAKE_SOURCE_DIR}/inc")
-set(vendorDir "${CMAKE_SOURCE_DIR}/vendor")
 
 # Headers from the `inc/` dir
 set(headers
@@ -38,7 +37,6 @@ set(headers
     ${incDir}/Timer.hpp
     ${incDir}/Time.hpp
     ${incDir}/macros.hpp
-
     ${testDir}/inc/tests.hpp
 )
 
@@ -49,34 +47,21 @@ set(sources
     ${testDir}/src/timer.cpp
     ${testDir}/src/time.cpp
     ${testDir}/src/sleep.cpp
-
     ${srcDir}/Stopwatch.cpp
     ${srcDir}/Timer.cpp
     ${srcDir}/Time.cpp
     ${srcDir}/Sleep.cpp
 )
 
-# Vendor sources from the `vendor/` dir that are used in this project
-set(vendorSources
-    # # IO Controller
-    # ${vendorDir}/io-controller-mini/src/functions.cpp
-    # ${vendorDir}/io-controller-mini/src/ioController.cpp
+# Create the shared library (.so)
+add_library(${projectName}_shared SHARED ${sources} ${headers})
 
-    # ## Conio.h
-    # ${vendorDir}/io-controller-mini/vendor/conio-master/conio.c
-)
-
-# Vendor headers from the `vendor/sleepx/` dir that are used in this project
-set(vendorHeaders
-    # # IO Controller
-    # ${vendorDir}/io-controller-mini/include/functions.hpp
-    # ${vendorDir}/io-controller-mini/include/ioController.hpp
-    # ${vendorDir}/io-controller-mini/include/structs.hpp
-
-    # ## Conio.h
-    # ${vendorDir}/io-controller-mini/vendor/conio-master/conio.h
-)
+# Create the static library (.a)
+add_library(${projectName}_static STATIC ${sources} ${headers})
 
 # Link the executable
-add_executable(${projectName} ${sources} ${headers} ${vendorSources} ${vendorHeaders})
+add_executable(${projectName} ${sources} ${headers})
+
+# Optional: Link static/shared libraries to the executable
+target_link_libraries(${projectName} PRIVATE ${projectName}_static)
 
