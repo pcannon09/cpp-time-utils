@@ -1,8 +1,10 @@
 #pragma once
 
-#include "Sleep.hpp"
+#include "../inc/macros.hpp"
 
 #include <string>
+
+#if __cplusplus >= 201103L
 
 namespace timeUtils
 {
@@ -53,3 +55,16 @@ namespace timeUtils
         std::string getID();
     };
 }
+
+#else
+namespace timeUtils
+{
+    class Sleep
+    { };
+}
+
+#   warning "Current CXX standard not supported"
+#   pragma message("CXX Standard: " TOSTRING(__cplusplus))
+
+#endif
+

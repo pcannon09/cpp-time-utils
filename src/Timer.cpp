@@ -1,10 +1,13 @@
 #include <string>
-#include <chrono>
-#include <thread>
-#include <atomic>
 
 #include "../inc/Timer.hpp"
 #include "../inc/types.hpp"
+
+#if __cplusplus >= 201102L
+
+#include <chrono>
+#include <thread>
+#include <atomic>
 
 namespace timeUtils
 {
@@ -143,3 +146,4 @@ namespace timeUtils
     { return this->finished; }
 }
 
+#endif

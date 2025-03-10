@@ -5,64 +5,83 @@
 #include <string>
 #include <vector>
 
+#if __cplusplus >= 199711L
+
 namespace timeUtils
 {
-    /// TimerStopwatchState
-    /// Get if the watch or stopwatch is paused, running or stopped
-    /// Includes:
-    /// FALSE, TRUE, PAUSED
+    /**
+     * @enum TimerStopwatchState
+     * @brief Represents the state of a timer or stopwatch.
+     */
     enum TimerStopwatchState
     {
-        FALSE = 0,
-        TRUE = 1,
-        PAUSED = 2
+        FALSE = 0, ///< Timer/stopwatch is stopped.
+        TRUE = 1,  ///< Timer/stopwatch is running.
+        PAUSED = 2 ///< Timer/stopwatch is paused.
     };
 
-    /// Timestamp - typedef struct
-    /// Timestamp datatype
-    /// Includes:
-    /// hour, min, sec, ms
+    /**
+     * @struct Timestamp
+     * @brief Represents a timestamp.
+     */
     typedef struct Timestamp
     {
-        unsigned int hour, min, sec, ms;
+        unsigned int hour; ///< Hour value.
+        unsigned int min;  ///< Minute value.
+        unsigned int sec;  ///< Second value.
+        unsigned int ms;   ///< Millisecond value.
     } Timestamp;
 
-    /// DateInfo - typedef struct
-    /// Shows date information
-    /// Includes:
-    /// year, month, day, weekDay, yearDay
+    /**
+     * @struct DateInfo
+     * @brief Represents date information.
+     */
     typedef struct DateInfo
     {
-        unsigned int year, month, day, weekDay, yearDay;
+        unsigned int year;    ///< Year value.
+        unsigned int month;   ///< Month value.
+        unsigned int day;     ///< Day value.
+        unsigned int weekDay; ///< Day of the week.
+        unsigned int yearDay; ///< Day of the year.
     } DateInfo;
 
-    /// TimeZoneInfo - typedef struct
-    /// Shows time zone information
-    /// Includes
-    /// isDST (Is Daylight Saving Time)
-    /// gmtOff
-    /// timezone (Ex: Spain, India, England, ...)
-    /// utcTimezone (Timezone hour and min for utc ({hour, min}))
+    /**
+     * @struct TimeZoneInfo
+     * @brief Represents time zone information.
+     */
     typedef struct TimeZoneInfo
     {
-        bool isDST;
-        bool gmtOff;
-
-        std::string timezone;
-
-        std::vector<std::string> utcTimezone;
+        bool isDST;                 ///< Indicates if daylight saving time is active.
+        bool gmtOff;                ///< Indicates if GMT offset is applied.
+        std::string timezone;       ///< Name of the timezone (e.g., "Spain", "India", "England").
+        std::vector<int> utcTimezone; ///< UTC timezone offset in hours and minutes ({hour, min}).
     } TimeZoneInfo;
 
-    /// TimeInfo - typedef struct
-    /// Shows time information
-    /// Includes:
-    /// Hour, min, sec, ms
-    /// isAm (Is time < 12PM) and is12hFormat (Is format not 24 hour)
+    /**
+     * @struct TimeInfo
+     * @brief Represents time information.
+     */
     typedef struct TimeInfo
     {
-        unsigned int hour, min, sec, ms;
+        unsigned int hour; ///< Hour value.
+        unsigned int min;  ///< Minute value.
+        unsigned int sec;  ///< Second value.
+        unsigned int ms;   ///< Millisecond value.
 
-        bool isAm;
-        bool is12hFormat;
+        bool isAm;        ///< Indicates if the time is before 12 PM.
+        bool is12hFormat; ///< Indicates if the time is in 12-hour format.
     } TimeInfo;
+
+    /**
+     * @struct TimeOffset
+     * @brief Represents a time offset.
+     */
+    typedef struct TimeOffset
+    {
+        int hour;         ///< Offset hours.
+        unsigned int min; ///< Offset minutes.
+    } TimeOffset;
 }
+
+#endif
+

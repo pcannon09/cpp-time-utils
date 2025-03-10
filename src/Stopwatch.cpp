@@ -1,10 +1,12 @@
 #include <string>
-#include <chrono>
-#include <thread>
-#include <atomic>
 
 #include "../inc/Stopwatch.hpp"
 #include "../inc/types.hpp"
+
+#if __cplusplus >= 201103L
+#include <chrono>
+#include <thread>
+#include <atomic>
 
 namespace timeUtils
 {
@@ -108,3 +110,4 @@ namespace timeUtils
     Timestamp Stopwatch::get()
     { return this->progress; }
 }
+#endif

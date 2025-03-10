@@ -1,6 +1,8 @@
 #pragma once
 
-#include "Stopwatch.hpp"
+#include "../inc/macros.hpp"
+
+#if __cplusplus >= 201103L
 
 #include <string>
 #include <chrono>
@@ -81,3 +83,16 @@ namespace timeUtils
         TimerStopwatchState getIsRunning();
     };
 }
+
+#else
+namespace timeUtils
+{
+    class Stopwatch
+    { };
+}
+
+#   warning "Current CXX standard not supported"
+#   pragma message("CXX Standard: " TOSTRING(__cplusplus))
+
+#endif
+

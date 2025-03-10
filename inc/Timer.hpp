@@ -3,10 +3,14 @@
 #include "Timer.hpp"
 
 #include <string>
-#include <chrono>
-#include <atomic>
 
 #include "../inc/types.hpp"
+#include "../inc/macros.hpp"
+
+#if __cplusplus >= 201102L
+
+#include <chrono>
+#include <atomic>
 
 namespace timeUtils
 {
@@ -31,12 +35,16 @@ namespace timeUtils
         static std::chrono::high_resolution_clock::time_point startTime;
         std::chrono::milliseconds elapsedTime;
 
-        /// Counter - Function
-        /// @brief Count the timer
+        /**
+         * @brief Count the timer.
+         */
         void counter();
 
-        /// Timestamp to Milliseconds - Function
-        /// @brief `Timestamp` datatype to milliseconds
+        /**
+         * @brief Converts a Timestamp to milliseconds.
+         * @param ts The Timestamp to be converted.
+         * @return The equivalent time in milliseconds.
+         */
         unsigned long long timestampToMS(Timestamp ts);
 
     public:
@@ -101,3 +109,16 @@ namespace timeUtils
         bool isFinished();
     };
 }
+
+#else
+namespace timeUtils
+{
+    class Timer
+    { };
+}
+
+#   warning "Current CXX standard not supported"
+#   pragma message("CXX Standard: " TOSTRING(__cplusplus))
+
+#endif
+

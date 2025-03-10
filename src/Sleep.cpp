@@ -1,8 +1,10 @@
 #include <string>
-#include <chrono>
-#include <thread>
 
 #include "../inc/Sleep.hpp"
+
+#if __cplusplus >= 201102L
+#include <chrono>
+#include <thread>
 
 namespace timeUtils
 {
@@ -32,3 +34,5 @@ namespace timeUtils
     std::string Sleep::getID()
     { return this->id; }
 }
+
+#endif
