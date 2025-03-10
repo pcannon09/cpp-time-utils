@@ -1,8 +1,10 @@
 #include <iostream>
-#include <chrono>
-#include <thread>
 
 #include "../../inc/Timer.hpp"
+
+#if __cplusplus >= 201102L
+#include <chrono>
+#include <thread>
 
 namespace tests
 {
@@ -45,3 +47,9 @@ namespace tests
         return 0;
     }
 }
+
+#else
+namespace tests
+{ int timer() { return -1; } }
+
+#endif

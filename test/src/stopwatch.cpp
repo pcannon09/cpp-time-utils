@@ -1,9 +1,10 @@
-#include <chrono>
-#include <thread>
-
 #include <iostream>
 
 #include "../../inc/Stopwatch.hpp"
+
+#if __cplusplus >= 201102L
+#include <chrono>
+#include <thread>
 
 namespace tests
 {
@@ -48,4 +49,10 @@ namespace tests
         return 0;
     }
 }
+
+#else
+namespace tests
+{ int stopwatch() { return -1; } }
+
+#endif
 

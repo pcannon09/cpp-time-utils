@@ -1,10 +1,10 @@
 #include <iostream>
 #include <unistd.h>
-#include <chrono>
-#include <thread>
+#include <cstdlib>
 
 #include "../../inc/Time.hpp"
 
+#if __cplusplus >= 199711L
 namespace tests
 {
     int time()
@@ -15,7 +15,10 @@ namespace tests
         timeUtils::DateInfo dateInfo;
         timeUtils::TimeInfo timeInfo;
 
-        time.setUTCOffset(5, 30);
+        time.setUTCOffset(11, 59);
+        time.addOffset(1, 1);
+
+        timeInfo.is12hFormat = time.set12hFormat(true);
 
         while (1)
         {
@@ -23,16 +26,16 @@ namespace tests
             time.update(dateInfo);
             time.update(timeInfo);
 
-            timeInfo.is12hFormat = time.set12hFormat(true);
-
             std::cout
                 << "- TIME ZONE INFO -\n"
                 << "GMT Off? : " << tzInfo.gmtOff << "\n"
                 << "Is DST? : " << tzInfo.isDST << "\n"
                 << "Current timezone : " << tzInfo.timezone << "\n"
                 << "Current UTC timezone : UTC " << 
-                    (std::stoi(tzInfo.utcTimezone[0]) >= 0 ? "+" : "") + tzInfo.utcTimezone[0] << ":" <<
+                    (tzInfo.utcTimezone[0]) << ":" <<
                     tzInfo.utcTimezone[1] << "\n"
+                << "UTC Offset: " << time.getUTCOffset().hour << " : " <<time.getUTCOffset().min << "\n"
+                << "Add Offset: " << time.getAddOffset().hour << " : " <<time.getAddOffset().min << "\n"
 
                 << "- TIME INFO -\n"
                 << "Hour: " << timeInfo.hour <<  "\n"
@@ -51,11 +54,15 @@ namespace tests
 
                 << "\r" << std::flush;
 
-                std::this_thread::sleep_for(std::chrono::milliseconds(50));
-
-                system("clear");
+            system("clear");
         }
 
         return 0;
     }
 }
+
+#else
+namespace tests
+{ int time() { return -1; } }
+
+#endif

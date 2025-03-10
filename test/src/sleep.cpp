@@ -4,6 +4,7 @@
 
 namespace tests
 {
+#if __cplusplus >= 201102L
     int sleep()
     {
         timeUtils::Sleep sleep("main");
@@ -30,5 +31,10 @@ namespace tests
 
         return 0;
     }
+
+#else
+    int sleep() { return -1; }
+
+#endif
 }
 
