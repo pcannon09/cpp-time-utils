@@ -18,35 +18,67 @@
 \DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ id;}
 \DoxyCodeLine{00015\ }
 \DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ Sleep(std::string\ ID);}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ hours(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ duration);}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ minutes(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ duration);}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ seconds(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ duration);}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ seconds(\textcolor{keywordtype}{double}\ duration);}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ milliseconds(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ duration);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Constructor\ to\ create\ the\ Sleep\ object.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ ID\ The\ identifier\ for\ the\ Sleep\ object.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ Sleep(std::string\ ID);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Sleep\ for\ a\ specified\ number\ of\ hours.}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ duration\ The\ number\ of\ hours\ to\ sleep.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ hours(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ duration);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Sleep\ for\ a\ specified\ number\ of\ minutes.}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ duration\ The\ number\ of\ minutes\ to\ sleep.}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ minutes(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ duration);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Sleep\ for\ a\ specified\ number\ of\ seconds.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ duration\ The\ number\ of\ seconds\ to\ sleep.}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ seconds(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ duration);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Sleep\ for\ a\ specified\ number\ of\ decimal\ seconds.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ duration\ The\ number\ of\ seconds\ to\ sleep\ (with\ decimal\ precision).}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ seconds(\textcolor{keywordtype}{double}\ duration);}
 \DoxyCodeLine{00046\ }
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ nanoseconds(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ duration);}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ std::string\ getID();}
-\DoxyCodeLine{00056\ \ \ \ \ \};}
-\DoxyCodeLine{00057\ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Sleep\ for\ a\ specified\ number\ of\ milliseconds.}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ duration\ The\ number\ of\ milliseconds\ to\ sleep.}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ milliseconds(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ duration);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Sleep\ for\ a\ specified\ number\ of\ nanoseconds.}}
+\DoxyCodeLine{00055\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ duration\ The\ number\ of\ nanoseconds\ to\ sleep.}}
+\DoxyCodeLine{00056\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ nanoseconds(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ duration);}
 \DoxyCodeLine{00058\ }
-\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{00060\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetimeUtils}{timeUtils}}}
-\DoxyCodeLine{00061\ \{}
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtimeUtils_1_1Sleep}{Sleep}}}
-\DoxyCodeLine{00063\ \ \ \ \ \{\ \};}
-\DoxyCodeLine{00064\ \}}
-\DoxyCodeLine{00065\ }
-\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#\ \ \ warning\ "{}Current\ CXX\ standard\ not\ supported"{}}}
-\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#\ \ \ pragma\ message("{}CXX\ Standard:\ "{}\ TOSTRING(\_\_cplusplus))}}
-\DoxyCodeLine{00068\ }
-\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00060\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ the\ ID\ of\ this\ Sleep\ object.}}
+\DoxyCodeLine{00061\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ The\ ID\ as\ a\ std::string.}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ std::string\ getID();}
+\DoxyCodeLine{00064\ \ \ \ \ \};}
+\DoxyCodeLine{00065\ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00068\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacetimeUtils}{timeUtils}}}
+\DoxyCodeLine{00069\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtimeUtils_1_1Sleep}{Sleep}}}
+\DoxyCodeLine{00071\ \ \ \ \ \{\ \};}
+\DoxyCodeLine{00072\ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#\ \ \ warning\ "{}Current\ CXX\ standard\ not\ supported"{}}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#\ \ \ pragma\ message("{}CXX\ Standard:\ "{}\ TOSTRING(\_\_cplusplus))}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00078\ }
 
 \end{DoxyCode}
