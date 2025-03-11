@@ -31,10 +31,12 @@ namespace tests
 
         std::this_thread::sleep_for(std::chrono::seconds(1));
 
+        std::cout << "PAUSE\n";
         timer.stop();
 
         std::this_thread::sleep_for(std::chrono::seconds(1));
 
+        std::cout << "START\n";
         timer.start();
 
         while (!timer.isFinished()) {  }

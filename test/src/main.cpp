@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 
     else
     {
-        std::cout << "What test do you want to run? Timer (timer), time (time) or stopwatch (stopwatch)\n>>> ";
+        std::cout << "What test do you want to run? Timer (timer), time (time), stopwatch (stopwatch) or sleep counter (sleep)\n>>> ";
         std::cin >> answer;
     }
 
