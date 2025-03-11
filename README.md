@@ -5,5 +5,5 @@
 
 **Time Utils**, Sleep for an amount of time, get date and time information, stopwatch and timer
 
-**_NOTE_:** The code is already documented by Doxygen, check source code for more information
+Go to documentation [here](https://pcannon09.github.io/docs/cpp-time-utils/docs/html/index.html)
 
