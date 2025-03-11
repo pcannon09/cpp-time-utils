@@ -25,59 +25,76 @@ namespace timeUtils
         static DateInfo dateInfo;
 
     public:
-        /// Time - Constructor
-        /// Set the ID of the `Time` object
-        /// @param ID
+        /*
+         * @brief Constructor to set the ID of the Time object.
+         * @param ID The identifier for the Time object.
+         */
         Time(std::string ID);
 
-        /// Set UTC offset - Function
-        /// Set the offset of UTC
-        /// @param hour
-        /// @param min
+        /*
+         * @brief Set the UTC offset.
+         * @param hour The hour offset.
+         * @param min The minute offset.
+         */
         void setUTCOffset(int hour, unsigned int min);
 
-        /// Set UTC offset - Function
-        /// Set the offset according to your current timezone
-        /// @param hour
-        /// @param min
+        /*
+         * @brief Set the offset according to your current timezone.
+         * @param hour The hour offset.
+         * @param min The minute offset.
+         */
         void addOffset(int hour, unsigned int min);
 
-        /// Get UTC Offset - Function
-        /// Get the previously added UTC offset
+        /*
+         * @brief Get the previously added UTC offset.
+         * @return The UTC offset as a TimeOffset object.
+         */
         TimeOffset getUTCOffset();
 
-        /// Get Add Offset - Function
-        /// Get the previously added offset
+        /*
+         * @brief Get the previously added offset.
+         * @return The added offset as a TimeOffset object.
+         */
         TimeOffset getAddOffset();
 
-        /// Get Days In Month
-        /// @brief Get the days in the current month
+        /*
+         * @brief Get the number of days in the current month.
+         * @return The number of days in the month.
+         */
         unsigned int getDaysInMonth();
 
-        /// Update - Function
-        /// Set the Time information and return if it was a success (0) or not (-1)
-        /// @param info
+        /*
+         * @brief Set the Time information and return success (0) or failure (-1).
+         * @param info The TimeInfo object containing the new time data.
+         * @return 0 if successful, -1 otherwise.
+         */
         int update(TimeInfo &info);
 
-        /// Update - Function - Overload
-        /// Set the Timezone information and return if it was a success (0) or not (-1)
-        /// @param info
+        /*
+         * @brief Set the Timezone information and return success (0) or failure (-1).
+         * @param info The TimeZoneInfo object containing the new timezone data.
+         * @return 0 if successful, -1 otherwise.
+         */
         int update(TimeZoneInfo &info);
 
-        /// Update - Function - Overload
-        /// Set the Date information and return if it was a success (0) or not (-1)
-        /// @param info
-        /// @return int
+        /*
+         * @brief Set the Date information and return success (0) or failure (-1).
+         * @param info The DateInfo object containing the new date data.
+         * @return 0 if successful, -1 otherwise.
+         */
         int update(DateInfo &info);
 
-        /// Set 12 Hour Format - Function
-        /// Set if it should use the 12 hour format
-        /// @return bool
+        /*
+         * @brief Set whether to use the 12-hour format.
+         * @param set12hFormat True to enable 12-hour format, false otherwise.
+         * @return True if successfully set, false otherwise.
+         */
         bool set12hFormat(bool set12hFormat);
 
-        /// Get ID - Function
-        /// Get the ID for the `Time` object
-        /// @return std::string
+        /*
+         * @brief Get the ID for the Time object.
+         * @return The ID as a std::string.
+         */
         std::string getID();
     };
 }

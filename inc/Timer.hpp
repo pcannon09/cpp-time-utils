@@ -35,12 +35,12 @@ namespace timeUtils
         static std::chrono::high_resolution_clock::time_point startTime;
         std::chrono::milliseconds elapsedTime;
 
-        /**
+        /*
          * @brief Count the timer.
          */
         void counter();
 
-        /**
+        /*
          * @brief Converts a Timestamp to milliseconds.
          * @param ts The Timestamp to be converted.
          * @return The equivalent time in milliseconds.
@@ -48,64 +48,78 @@ namespace timeUtils
         unsigned long long timestampToMS(Timestamp ts);
 
     public:
-        /// Timer - Constructor
-        /// @brief Set the ID of the timer
-        /// @param id
-        /// @param duration
+        /*
+         * @brief Constructor to set the ID and duration of the timer.
+         * @param id The identifier for the timer.
+         * @param duration The duration of the timer.
+         */
         Timer(std::string id, Timestamp duration);
-        
-        /// Timer - Deconstructor
-        /// @brief Call the `Timer::deleteTimer()` function to stop the timer
+
+        /*
+         * @brief Destructor that calls Timer::deleteTimer() to stop the timer.
+         */
         ~Timer();
 
-        /// Set Duration - Function
-        /// Set the duration of the timer
+        /*
+         * @brief Set the duration of the timer.
+         * @param timer The new duration to set.
+         */
         void setDuration(Timestamp timer);
 
-        /// Get ID - Function
-        /// @brief Get the ID of the Timer
-        /// @return std::string
+        /*
+         * @brief Get the ID of the Timer.
+         * @return The timer ID as a std::string.
+         */
         std::string getID();
 
-        /// Set Thread - Function
-        /// @brief Set if it should use a separate thread when running the timer
-        /// @param toCreate
+        /*
+         * @brief Set whether the timer should use a separate thread when running.
+         * @param toCreate True to use a separate thread, false otherwise.
+         */
         void setThread(bool toCreate);
 
-        /// Start - Function
-        /// @brief Start the timer
+        /*
+         * @brief Start the timer.
+         */
         void start();
 
-        /// Stop - Function
-        /// @brief Stop ( Pause ) the timer
+        /*
+         * @brief Stop (pause) the timer.
+         */
         void stop();
 
-        /// Reset - Function
-        /// @brief Reset the timer to its starting value
+        /*
+         * @brief Reset the timer to its starting value.
+         */
         void reset();
 
-        /// Reset - Function
-        /// @brief Delete the timer and reset everything
+        /*
+         * @brief Delete the timer and reset everything.
+         */
         void deleteTimer();
 
-        /// Set - Function
-        /// @brief Set the time according to the `Timestamp`
-        /// @param time
+        /*
+         * @brief Set the time according to the given Timestamp.
+         * @param time The timestamp to set.
+         */
         void set(Timestamp time);
 
-        /// Get - Function
-        /// @brief Get the current timestamp from this watch
-        /// @return timestamp
+        /*
+         * @brief Get the current timestamp from this timer.
+         * @return The current timestamp.
+         */
         Timestamp get();
 
-        /// Get Is Running - Function
-        /// @brief Get if the timer is running
-        /// @return TimerStopwatchState 
+        /*
+         * @brief Check if the timer is running.
+         * @return The current state of the timer as a TimerStopwatchState.
+         */
         TimerStopwatchState getIsRunning();
 
-        /// Is Finished - Function
-        /// @brief Get if the timer is finished
-        /// @return bool
+        /*
+         * @brief Check if the timer has finished.
+         * @return True if the timer has finished, false otherwise.
+         */
         bool isFinished();
     };
 }

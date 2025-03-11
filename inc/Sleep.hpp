@@ -14,44 +14,52 @@ namespace timeUtils
         static std::string id;
 
     public:
-        /// Sleep - Constructor
-        /// @brief Create the `Sleep` object
-        /// @param ID
+        /*
+         * @brief Constructor to create the Sleep object.
+         * @param ID The identifier for the Sleep object.
+         */
         Sleep(std::string ID);
 
-        /// Hours - Function
-        /// @brief Sleep for (x) hours
-        /// @param duration
+        /*
+         * @brief Sleep for a specified number of hours.
+         * @param duration The number of hours to sleep.
+         */
         void hours(unsigned int duration);
 
-        /// Hours - Function
-        /// @brief Sleep for (x) minutes
-        /// @param duration
+        /*
+         * @brief Sleep for a specified number of minutes.
+         * @param duration The number of minutes to sleep.
+         */
         void minutes(unsigned int duration);
 
-        /// Hours - Function
-        /// @brief Sleep for (x) seconds
-        /// @param duration
+        /*
+         * @brief Sleep for a specified number of seconds.
+         * @param duration The number of seconds to sleep.
+         */
         void seconds(unsigned int duration);
 
-        /// Hours - Function - Overload
-        /// @brief Sleep for (x) decimal seconds
-        /// @param duration
+        /*
+         * @brief Sleep for a specified number of decimal seconds.
+         * @param duration The number of seconds to sleep (with decimal precision).
+         */
         void seconds(double duration);
 
-        /// Hours - Function
-        /// @brief Sleep for (x) milliseconds
-        /// @param duration
+        /*
+         * @brief Sleep for a specified number of milliseconds.
+         * @param duration The number of milliseconds to sleep.
+         */
         void milliseconds(unsigned int duration);
 
-        /// Hours - Function
-        /// @brief Sleep for (x) nanoseconds
-        /// @param duration
+        /*
+         * @brief Sleep for a specified number of nanoseconds.
+         * @param duration The number of nanoseconds to sleep.
+         */
         void nanoseconds(unsigned int duration);
 
-        /// Get ID - Function
-        /// Get the ID from this object
-        /// @return std::string
+        /*
+         * @brief Get the ID of this Sleep object.
+         * @return The ID as a std::string.
+         */
         std::string getID();
     };
 }
