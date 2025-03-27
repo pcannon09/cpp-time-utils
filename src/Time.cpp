@@ -128,17 +128,8 @@ namespace timeUtils
             int adjHour = 0;
             int adjMin = 0;
 
-            if (this->utcHourOffset != 0 || this->utcMinOffset != 0)
-            {
-                adjHour = local->tm_hour + this->utcHourOffset + this->addHourOffset;
-                adjMin = local->tm_min + this->utcMinOffset + this->addMinOffset;
-            }
-
-            else
-            {
-                adjHour = local->tm_hour + this->addHourOffset;
-                adjMin = local->tm_min + this->addMinOffset;
-            }
+            adjHour = local->tm_hour + this->utcHourOffset + this->addHourOffset;
+            adjMin = local->tm_min + this->utcMinOffset + this->addMinOffset;
 
             if (adjMin >= 60)
             {
@@ -220,14 +211,20 @@ namespace timeUtils
 
     TimeOffset Time::getUTCOffset()
     {
-        TimeOffset offset = {this->utcHourOffset, this->utcMinOffset};
+        TimeOffset offset = {};
+
+        offset.hour = this->utcHourOffset;
+        offset.min = this->utcMinOffset;
 
         return offset;
     }
 
     TimeOffset Time::getAddOffset()
     {
-        TimeOffset offset = {this->addHourOffset, this->addMinOffset};
+        TimeOffset offset = {};
+
+        offset.hour = this->addHourOffset;
+        offset.min = this->addMinOffset;
 
         return offset;
     }

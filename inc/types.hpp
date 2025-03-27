@@ -78,8 +78,8 @@ namespace timeUtils
      */
     typedef struct TimeOffset
     {
-        int hour;         ///< Offset hours.
-        unsigned int min; ///< Offset minutes.
+        int hour = 0;         ///< Offset hours.
+        unsigned int min = 0; ///< Offset minutes.
     } TimeOffset;
 }
 
