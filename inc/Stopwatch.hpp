@@ -113,7 +113,7 @@ namespace timeUtils
 }
 
 #   warning "Current CXX standard not supported"
-#   pragma message("CXX Standard: " TOSTRING(__cplusplus))
+#   pragma message("CXX Standard: " STT_TOSTRING(__cplusplus))
 
 #endif
 
