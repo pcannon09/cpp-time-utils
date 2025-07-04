@@ -27,9 +27,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 11) # Minimum version can be C++11 but there is some support for C++98
 
 # Dir setup
-set(srcDir "${CMAKE_SOURCE_DIR}/src")
-set(testDir "${CMAKE_SOURCE_DIR}/test")
-set(incDir "${CMAKE_SOURCE_DIR}/inc")
+set(srcDir "${CMAKE_CURRENT_SOURCE_DIR}/src")
+set(testDir "${CMAKE_CURRENT_SOURCE_DIR}/test")
+set(incDir "${CMAKE_CURRENT_SOURCE_DIR}/inc")
 
 # Headers from the `inc/` dir
 set(headers
