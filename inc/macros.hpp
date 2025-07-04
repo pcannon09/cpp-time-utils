@@ -3,7 +3,7 @@
 // Versioning
 #define STT_VERSION_MAJOR          1
 #define STT_VERSION_MINOR          1
-#define STT_VERSION_PATCH          2
+#define STT_VERSION_PATCH          3
 
 // Version states:
 // dev - develoment (Before Beta version)
@@ -18,5 +18,5 @@
     ((STT_VERSION_MAJOR<<16)|(STT_VERSION_MINOR<<8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE << 24))
 
 // Macro utils
-#define STRINGIFY(x) #x
-#define TOSTRING(x) STRINGIFY(x)
+#define STT_STRINGIFY(x) #x
+#define STT_TOSTRING(x) STT_STRINGIFY(x)
