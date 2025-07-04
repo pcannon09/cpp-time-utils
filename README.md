@@ -1,5 +1,5 @@
 # Time Utils
-# Version 1.1.2 build
+# Version 1.1.3 build
 
 ---
 
